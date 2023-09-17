@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            background-size: cover;
+        }
+        @media (max-width: 1000px){
+            .background{
+                position: absolute;
+                left: 100px;
+            }
+            .文华堂 {
+                background-image: url("文华堂.png");
+                position: absolute;
+                left: 725px;
+                top: 439px;
+                width: 208px;
+                height: 134px;
+                z-index: 6;
+            }
+            .志行楼 {
+                background-image: url("志行楼.png");
+                position: absolute;
+                left: 843px;
+                top: 268px;
+                width: 198px;
+                height: 154px;
+                z-index: 5;
+            }
+            .藏书阁 {
+                background-image: url("藏书阁.png");
+                position: absolute;
+                left: 100px;
+                top: 289px;
+                width: 287px;
+                height: 98px;
+                z-index: 4;
+            }
+            .飞花社 {
+                background-image: url("飞花社.png");
+                position: absolute;
+                left: 321px;
+                top: 409px;
+                width: 159px;
+                height: 167px;
+                z-index: 3;
+            }
+            .观诗居 {
+                background-image: url("观诗居.png");
+                position: absolute;
+                left: 357px;
+                top: 171px;
+                width: 426px;
+                height: 405px;
+                z-index: 2;
+                }
+        }
+        @media (min-width: 1001px){
+
+            .文华堂 {
+                background-image: url("文华堂.png");
+                position: absolute;
+                width: 21vw;
+                left: 62.2vw;
+                top: 36.6vw;
+                height: 12vw;
+                z-index: 6;
+            }
+            .志行楼 {
+                background-image: url("志行楼.png");
+                position: absolute;
+                left: 78.9vw;
+                top: 23vw;
+                width: 15vw;
+                height: 12vw;
+                z-index: 5;
+            }
+            .藏书阁 {
+                background-image: url("藏书阁.png");
+                position: absolute;
+                left: 0vw;
+                top: 23vw;
+                width: 30vw;
+                height: 10vw;
+                z-index: 4;
+            }
+            .飞花社 {
+                background-image: url("飞花社.png");
+                position: absolute;
+                left: 22.5em;
+                top: 31.5em;
+                width: 13.5em;
+                height: 13.5em;
+                z-index: 3;
+            }
+            .观诗居 {
+                background-image: url("观诗居.png");
+                position: absolute;
+                left: 28vw;
+                top: 15vw;
+                width: 40vw;
+                height: 33.3vw;
+                z-index: 2;
+                }
+        }
+        a:hover img {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+            <div id="background" style="position:absolute; z-index:-1; width:100%; height:100%; top:0px; left:0px;">
+                <img src="./img/底.png" alt="" width="100%" height="100%">
+            </div>
+            <div id="content">
+               <a href="../文化堂/index.html"><img src="./img/文华堂.png" alt="" class="文华堂"></a>
+            <a href="../志行楼/素材/卡片页面.html"><img src="./img/志行楼.png" alt="" class="志行楼"></a>
+            <a href="../藏书阁/藏书阁.html"><img src="./img/藏书阁.png" alt="" class="藏书阁"></a>
+            <a href="../观诗居/Management/index.html"><img src="./img/观诗居.png" alt="" class="观诗居"></a>
+            <a href="../飞花社/飞花社/飞花社.html"><img src="./img/飞花社.png" alt="" class="飞花社"></a>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+</body>
+</html>
