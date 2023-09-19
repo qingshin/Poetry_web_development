@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>文化堂</title>
     <style>
+     @font-face{
+             font-family: 'simfang';
+             src: url("font/simfang.ttf");
+             font-style: normal;
+            }
         body{
             background-color: aliceblue;
             background-size: cover;
@@ -87,11 +92,18 @@
         width: 6.1%;
         height: 5.46%;
         }
-        .btn{
-        position: fixed;
-        top: 25vw;
-        left: 3vw;
-        }
+        #pre-button{
+                top: 2vw;
+                left: 2vw;
+                writing-mode: tb-rl;
+                font-size: 40px;
+                font-family: 'simfang';
+                position: fixed;
+                border-style: none;
+                border-radius: 25vw;
+                background-color: rgb(112, 128, 105);
+                padding: 15px;
+            }
     </style>
 </head>
 <body>
@@ -102,6 +114,6 @@
     <a href="./陆游与唐琬.html" class="loveword">陆游与唐琬</a>
     <a href="./家祭.html" class="sacrificeword">家祭</a>
     <a href="./年谱.html" class="chronologyword">年谱</a>
-    <a href="../主页/主页.html"><button id="pre-button"><img src="img/上一页按键.png" class="btn"></button></a>
+    <a href="../主页/主页.html"><button id="pre-button">返回</button></a>
 </body>
 </html>
