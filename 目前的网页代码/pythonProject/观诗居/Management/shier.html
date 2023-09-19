@@ -493,6 +493,10 @@
             alert("必须填写省份");
          }
          else{
+            if(Input_text=="河南" || Input_text=="河南省")
+               rt.style.display="block";
+            else
+               wr.style.display="block";
             playNextVideo();
          }
       })
@@ -504,6 +508,10 @@
             alert("必须填写发明内容");
          }
          else{
+            if(Input_text=="造纸术")
+               rt.style.display="block";
+            else
+               wr.style.display="block";
             playNextVideo();
          }
       })
