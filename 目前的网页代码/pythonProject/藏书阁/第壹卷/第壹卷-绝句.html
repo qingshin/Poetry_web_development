@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>第壹卷-绝句</title>
+        <script type="text/javascript" src="../js/vue.js"></script>
+    </head>
+    <style>
+        @media (max-width: 1200px){
+            .background{
+                position: absolute;
+                left: 100px;
+            }
+            .leftpg{
+                position:absolute;
+                left: 190px;
+                top: 70px;
+                width: 410px;
+                height: 530px;
+                overflow: auto;
+            }
+            .rightpg{
+                position:absolute;
+                left: 630px;
+                top: 70px;
+                width: 390px;
+                height: 530px;
+                overflow: auto;
+            }
+        }
+        @media (min-width: 1201px){
+            .background{
+                position: absolute;
+                left: calc(50vw - 500px);
+            }
+            .leftpg{
+                position:absolute;
+                left: calc(50vw - 425px);
+                top: 70px;
+                width: 410px;
+                height: 530px;
+                overflow: auto;
+            }
+            .rightpg{
+                position:absolute;
+                left: calc(50vw + 30px);
+                top: 70px;
+                width: 390px;
+                height: 530px;
+                overflow: auto;
+            }
+        }
+        body{
+            background-image: url(../element/木板.jpg);
+            background-size: cover;
+        } 
+        a{
+            text-decoration:none;
+        }
+
+        #txt{
+            position: absolute;
+            top: 25%;
+	        bottom: 25%;
+            left: 0;
+            right: 0;
+            /*border:1px solid black;*/
+        }
+        .textta{
+            font-family: cursive;
+            position: relative;
+            text-align: center;
+            margin: 1%;
+        }
+        .textp{
+            font-family: cursive;
+            font-size: large;
+            position: relative;
+            text-align: center;
+            margin: 0;
+        }
+        .text1_{
+            font-family: cursive;
+            position: relative;
+            text-align: center;
+            margin: 1%;
+        }
+        .text2{
+            font-family: cursive;
+            position: relative;
+            text-align: left;
+            margin: 0;
+        }
+        .text2_{
+            font-family: cursive;
+            text-indent: 2em;
+            position: relative;
+            text-align: start;
+            margin: 0;
+        }
+        .text3{
+            font-family: cursive;
+            text-indent: 1em;
+            position: relative;
+            text-align: start;
+            margin:0;
+        }
+        .text3_{
+            font-family: cursive;
+            position: relative;
+            text-align: start;
+            margin:0;
+        }
+        .image{
+            position: relative;
+            max-width: 370px;
+            height: auto;
+        }
+        .link:hover{
+            color:gray;
+        }
+        .link{
+            color:#333;
+            font-family: cursive;
+            font-size: x-large;
+        }
+    </style>
+    <body>
+        <img src="../element/藏书阁界面.png" class="background">
+        <div class="leftpg">
+            <a href="../藏书阁-第壹卷.html" class="link">目录</a>
+            <div id="txt">
+                <h1 class="textta">绝句</h1>
+                <h3 class="textta">杜甫 〔唐代〕</h3>
+                <p class="textp">两个黄鹂鸣翠柳，一行白鹭上青天。</p>
+                <p class="textp">窗含西岭千秋雪，门泊东吴万里船。</p>
+                <br>
+                <h3 class="text2">译文</h3>
+                <p class="text1_">两只黄鹂在翠绿的柳树间鸣叫，</p>
+                <P class="text1_">一行白鹭直冲向蔚蓝的天空。</P>
+                <p class="text1_">坐在窗前可以看见西岭千年不化的积雪，</p>
+                <p class="text1_">门前停泊着自万里外的东吴远行而来的船只。</p>
+            </div>
+        </div>
+        <div class="rightpg">
+            <h3 class="text2">注释</h3>
+            <p class="text3_">东吴：古时候吴国的领地，江苏省一带</p>
+            <br>
+            <h3 class="text2">赏析</h3>
+            <p class="text2_">《绝句》以清新轻快的景色寄托诗人内心复杂的情绪，表面上表现的是生机盎然的画面，而在欢快明亮的景象内，却寄托着诗人对时光流逝，孤独而无聊的失落之意。</p>
+            <br>
+            <img src="../img/赠汪伦.jpg" class="image">
+        </div>
+    </body>
+    </script>
+</html>
