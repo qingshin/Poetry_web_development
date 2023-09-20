@@ -14,6 +14,7 @@
          margin: 0;
          padding: 0;
          height: 100%;
+         background-color:rgb(214, 222, 190);
       }
       #animation-container {
          z-index:0;
@@ -40,7 +41,7 @@
       #pre-button {
          position: absolute;
          top: 25vw;
-         left: 0vw;
+         left: 11vw;
          border-style: none;
          background-color:transparent;
          display: none;
@@ -50,6 +51,7 @@
          position: absolute;
          width: 4vw;
          height: 6vw;
+         z-index: 100;
       }
       #show{
          background-color:transparent;
@@ -130,7 +132,7 @@
          left: 30vw;
          top:calc(100vw*3.5/16);
          position:fixed;
-         z-index:999;
+         z-index:100;
          display: none;
          font-family: 'simfang';
          font-weight: bold;
@@ -144,10 +146,10 @@
          text-align:center;
          margin:calc(3vw*3/4);
          border: none;
-         height: calc(15.9vw*73/203);
-         width: 15.9vw;
-         left: 2.2vw;
-         top:calc(100vw*2.5/16);
+         height: calc(14vw*73/203);
+         width: 14vw;
+         left: 12.2vw;
+         top:calc(100vw*2.2/16);
          position:fixed;
          z-index:999;
          display: none;
@@ -163,12 +165,12 @@
          text-align:center;
          margin:calc(3vw*3/4);
          border: none;
-         height: calc(15.9vw*73/203);
-         width: 15.9vw;
-         left: 2.2vw;
-         top:calc(100vw*3.65/16);
+         height: calc(14vw*73/203);
+         width: 14vw;
+         left: 12.5vw;
+         top:calc(100vw*3.2/16);
          position:fixed;
-         z-index:999;
+         z-index:149;
          display: none;
          font-family: 'simfang';
          font-weight: bold;
@@ -272,16 +274,58 @@
          position:fixed;
       }
       .btn2{
+         width: 150px;
+         height: 70px;
+         margin-bottom: 30px;
          font-size:30px;
          font-family:'simfang';
          font-weight:bold;
+         z-index: 100;
+         border-radius: 25px;
+         background-color: blanchedalmond;
+         border-color: brown;
       }
+      .wxs{
+         left: 40vw;
+         top: 20vh;
+         position: fixed;
+         z-index: 150;
+      }
+      #wrong{
+         width: 30vw;
+         height: 25vw;
+         display: none;
+      }
+      #right{
+         width:30vw;
+         height:30vw;
+         display:none;
+      }
+      #btton{
+                top: 2vw;
+                margin-left: 2.5vw;
+                margin-bottom: 30px;
+                writing-mode: tb-rl;
+                font-size: 40px;
+                font-family: 'simfang';
+                font-weight: bold;
+                border-style: none;
+                border-radius: 25vw;
+                background-color: blanchedalmond;
+                border-color: brown;
+                padding: 15px;
+            }
    </style>
 </head>
 
 <body>
    <div id="course">
-      <button class="btn2">第二节</button>
+      <a href="../../主页/主页.html"><button id="btton">返回</button></a>
+      <button class="btn2" id="one">第一节</button>
+      <button class="btn2" id="two">第二节</button>
+      <button class="btn2" id="three">第三节</button>
+      <button class="btn2" id="four">第四节</button>
+      <button class="btn2" id="five">第五节</button>
    </div>
    <div id="animation-container"> 
       <video id="animated-video" embed="opaque" controls="true">
@@ -324,10 +368,12 @@
    <button id="museum">陆游纪念馆</button>
    <button id="tip">“游览指南”</button>
    <a href="../../飞花社/飞花社/飞花社.html"><p id="link2">“飞花社”</p></a>
+   <img id="wrong" class="wxs" src="images/回答错误.png">
+   <img id="right" class="wxs"src="images/回答正确.png">
 
    <script>
       var playlist = ['videos/start.mp4','videos/s1.mp4','videos/s2.mp4','videos/s3.mp4','videos/s4.mp4'
-      ,'videos/s5.mp4','videos/s6.mp4','videos/s6-2.mp4','videos/s7.mp4','videos/s8.mp4','videos/s8-2.mp4'
+      ,'videos/s5.mp4','videos/s6.mp4','videos/s6-2.mp4','videos/s7.mp4','videos/s8-1.mp4','videos/s8-2.mp4'
       ,'videos/s9.mp4','videos/s10-1.mp4','videos/s10-2.mp4','videos/s11.mp4','videos/s12.mp4','videos/s13.mp4'
       ,'videos/s14.mp4','videos/s15.mp4','videos/s16.mp4','videos/s17.mp4','videos/s18.mp4']; // 初始化播放列表   
       var currentVideoIndex = 0;
@@ -347,6 +393,8 @@
       var tp=document.getElementById("tip");
       var lk2=document.getElementById("link2");
       var sbt=document.getElementById("st");
+      var rt=document.getElementById("right");
+      var wr=document.getElementById("wrong");
 
       playCurrentVideo();
 
@@ -387,6 +435,8 @@
       }
 
       function playNextVideo() {
+         rt.style.display="none";
+         wr.style.display="none";
          f=0;
          if(playlist[currentVideoIndex]=='videos/s13.mp4')
          {
@@ -425,6 +475,8 @@
       }
 
       function playPreVideo() {
+         rt.style.display="none";
+         wr.style.display="none";
          f=0;
          if(playlist[currentVideoIndex]=='videos/s15.mp4')
          {
@@ -497,10 +549,12 @@
                rt.style.display="block";
             else
                wr.style.display="block";
-            playNextVideo();
+            setTimeout(()=>{
+               playNextVideo();
+            },3000);
+
          }
       })
-
       subbt2.addEventListener("click",function(){
          var Input_text = text_input2.value;
          if(Input_text==null || Input_text=="")
@@ -512,7 +566,9 @@
                rt.style.display="block";
             else
                wr.style.display="block";
-            playNextVideo();
+            setTimeout(()=>{
+               playNextVideo();
+            },3000);
          }
       })
 
@@ -563,7 +619,7 @@
             text_input1.style.display="block";
             subbt1.style.display="block";
          }
-         if(playlist[currentVideoIndex]=='videos/s8.mp4')
+         if(playlist[currentVideoIndex]=='videos/s8-1.mp4')
          {
             text_input2.style.display="block";
             subbt2.style.display="block";

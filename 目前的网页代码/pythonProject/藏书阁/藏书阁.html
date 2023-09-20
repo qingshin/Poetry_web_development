@@ -6,6 +6,11 @@
         <script type="text/javascript" src="../js/vue.js"></script>
     </head>
     <style>
+        @font-face{
+             font-family: 'simfang';
+             src: url("../藏书阁/img/font/simfang.ttf");
+             font-style: normal;
+            }
         body{
             position: static;
             margin:0;
@@ -22,8 +27,8 @@
         }
         .one{
             position:absolute;
-            margin-top: 334px;
-            margin-left: 366px;
+            margin-top: 380px;
+            margin-left: 460px;
             display: block;
             width: 100px;
             height: 200px;
@@ -32,8 +37,8 @@
         }
         .two{
             position:absolute;
-            margin-top: 444px;
-            margin-left: 525px;
+            margin-top: 490px;
+            margin-left: 615px;
             display: block;
             width: 210px;
             height: 200px;
@@ -42,27 +47,35 @@
         }
         .three{
             position:absolute;
-            margin-top: 320px;
-            margin-left: 822px;
+            margin-top: 365px;
+            margin-left: 928px;
             display: block;
             width: 100px;
             height: 190px;
             object-fit: contain;
         }
-        .btn{
-             position: fixed;
-             top: 24vw;
-             left: 0vw;
-        }
+        #pre-button{
+                top: 2vw;
+                left: 0vw;
+                writing-mode: tb-rl;
+                font-size: 40px;
+                font-family: 'simfang';
+                position: fixed;
+                border-style: none;
+                border-radius: 25vw;
+                background-color: rgb(112, 128, 105);
+                padding: 15px;
+            }
     </style>
     <body>
+        <audio autoplay="true"  loop="loop"><source src="../../../static/media/csg.mp3"></audio>
         <img src="./element/藏书阁-底.png" class="background">
         <div>
             <a href="藏书阁-第壹卷.html" ><img src="./element/卷1.png" alt="第壹卷" class="one"></a>
             <a href="" ><img src="./element/卷2.png" alt="第贰卷" class="two"></a>
             <a href="" ><img src="./element/卷3.png" alt="第叁卷" class="three"></a>
         </div>
-         <a href="../主页/主页.html"><button id="pre-button"><img src="img/上一页按键.png" class="btn"></button></a>
+        <a href="../主页/主页.html"><button id="pre-button">返回</button></a>
     </body>
     <script type="text/javascript">
         

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Video Framework</title>
+   <style>
+      html, body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+      }
+      #animation-container {
+         width: 100%;
+         height: calc(100vw * 9 / 16);
+         position: relative;
+         overflow: hidden;
+      }
+      video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      button {
+         position: fixed;
+         bottom: 10px;
+         right: 10px;
+      }
+   </style>
+</head>
+<body>
+   <div id="animation-container">
+      <video id="animated-video">
+         <source  src="videos/start">
+         <source src="videos/s1.mp4" type="video/mp4">
+         <source src="videos/s2.mp4" type="video/webm">
+         <source src="videos/s6.mp4" type="video/webm">
+         <source src="videos/s6-2.mp4" type="video/webm">
+         <source src="videos/s7.mp4" type="video/webm">
+         <source src="videos/s8-1.mp4" type="video/webm">
+         <source src="videos/s8-2.mp4" type="video/webm">
+         <source src="videos/s10-1.mp4" type="video/webm">
+         <source src="videos/s10-2.mp4" type="video/webm">
+         <source src="videos/s11.mp4" type="video/webm">
+         <source src="videos/s13.mp4" type="video/webm">
+         <source src="videos/s14.mp4" type="video/webm">
+         Your browser does not support HTML5 video.
+      </video>
+   </div>
+
+   <button id="continue-button">继续</button>
+
+   <script>
+      var playlist = ['videos/start','videos/s1.mp4','videos/s2.mp4','videos/s6.mp4','videos/s6-2.mp4','videos/s7.mp4'
+    ,'videos/s8-1.mp4','videos/s8-2.mp4','videos/s10-1.mp4','videos/s10-2.mp4','videos/s11.mp4'
+    ,'videos/s12.mp4','videos/s13.mp4','videos/s14.mp4']; // 初始化播放列表   
+      var currentVideoIndex = 0;
+      var video = document.getElementById("animated-video");
+      var continueButton = document.getElementById("continue-button");
+
+      function playCurrentVideo() {
+         video.src = playlist[currentVideoIndex];
+         video.play();
+      }
+
+      function pauseCurrentVideo() {
+         video.pause();
+         continueButton.style.display = "block";
+      }
+
+      function playNextVideo() {
+         currentVideoIndex++;
+         if (currentVideoIndex < playlist.length) {
+            playCurrentVideo();
+            } else {
+               continueButton.style.display = "none";
+            }
+      }
+      
+      continueButton.addEventListener("click", function() {
+         playNextVideo();
+      });
+
+      if(video.addEventListener("ended",function(){
+         //视频结束
+         pauseCurrentVideo();
+      }));
+      playCurrentVideo();
+    </script> 
+</body> 
+</html>
