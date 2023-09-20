@@ -395,6 +395,7 @@
       var sbt=document.getElementById("st");
       var rt=document.getElementById("right");
       var wr=document.getElementById("wrong");
+      var four=document.getElementById("four");
 
       playCurrentVideo();
 
@@ -605,6 +606,11 @@
          currentVideoIndex+=1;
          playCurrentVideo();
          sbt.style.display="none";
+      })
+
+      four.addEventListener("click",function(){
+         currentVideoIndex=12;
+         playCurrentVideo();
       })
 
       if(video.addEventListener("ended",function(){
