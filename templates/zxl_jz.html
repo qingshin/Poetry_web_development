@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            卷轴页面
+        </title>
+        <style>
+            .background{
+                position: fixed;
+                width: 1400px;
+                height: 750px;
+                left: 70px;
+                z-index: -1;
+            }
+            .picture{
+                position: fixed;
+                width: 1000px;
+                height: 600px;
+                left: 190px;
+                top: 150px;
+            }
+            .bottomleft{
+                position: fixed;
+                width: 100px;
+                height: 80px;
+                left: 150px;
+                top: 375px;
+            }
+            .text{
+                position: fixed;
+                writing-mode: tb-rl;
+                font-size: 30px;
+                left: 700px;
+                top: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <audio autoplay="true" loop="loop"><source src="../static/media/zxl.mp3"></audio>
+        <img src="../static/image/智行楼背景.png" class="background">
+        <img src="../static/image/卷轴.png" class="picture">
+        <div class="text">报告壹</div>
+        <a href="zxl_index.html" target="_self">
+            <img src="../static/image/向上按键.png" class="bottomleft">
+        </a>
+    </body>
+</html>

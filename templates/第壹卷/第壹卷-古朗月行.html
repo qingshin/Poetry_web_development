@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>第壹卷-古朗月行</title>
+        <script type="text/javascript" src="../js/vue.js"></script>
+    </head>
+    <style>
+        @media (max-width: 1200px){
+            .background{
+                position: absolute;
+                left: 100px;
+            }
+            .leftpg{
+                position:absolute;
+                left: 190px;
+                top: 70px;
+                width: 410px;
+                height: 530px;
+                overflow: auto;
+            }
+            .rightpg{
+                position:absolute;
+                left: 630px;
+                top: 70px;
+                width: 390px;
+                height: 530px;
+                overflow: auto;
+            }
+        }
+        @media (min-width: 1201px){
+            .background{
+                position: absolute;
+                left: calc(50vw - 500px);
+            }
+            .leftpg{
+                position:absolute;
+                left: calc(50vw - 425px);
+                top: 70px;
+                width: 410px;
+                height: 530px;
+                overflow: auto;
+            }
+            .rightpg{
+                position:absolute;
+                left: calc(50vw + 30px);
+                top: 70px;
+                width: 390px;
+                height: 530px;
+                overflow: auto;
+            }
+        }
+        body{
+            background-image: url("../../static/image/木板.jpg");
+            background-size: cover;
+        } 
+        a{
+            text-decoration:none;
+        }
+
+        #txt{
+            position: absolute;
+            top: 10%;
+	        bottom: 25%;
+            left: 0;
+            right: 0;
+            /*border:1px solid black;*/
+        }
+        .textta{
+            font-family: cursive;
+            position: relative;
+            text-align: center;
+            margin: 1%;
+        }
+        .textp{
+            font-family: cursive;
+            font-size: large;
+            position: relative;
+            text-align: center;
+            margin: 0;
+        }
+        .text1_{
+            font-family: cursive;
+            position: relative;
+            text-align: center;
+            margin: 1%;
+        }
+        .text2{
+            font-family: cursive;
+            position: relative;
+            text-align: left;
+            margin: 0;
+        }
+        .text2_{
+            font-family: cursive;
+            text-indent: 2em;
+            position: relative;
+            text-align: start;
+            margin: 0;
+        }
+        .text3{
+            font-family: cursive;
+            text-indent: 1em;
+            position: relative;
+            text-align: start;
+            margin:0;
+        }
+        .image{
+            position: absolute;
+            max-width: 370px;
+            height: auto;
+        }
+        .link:hover{
+            color:gray;
+        }
+        .link{
+            color:#333;
+            font-family: cursive;
+            font-size: x-large;
+        }
+    </style>
+    <body>
+        <img src="../../static/image/藏书阁界面.png" class="background">
+        <div class="leftpg">
+            <a href="../../templates/csg01.html" class="link">目录</a>
+            <div id="txt">
+                <h1 class="textta">古朗月行</h1>
+                <h3 class="textta">李白 〔唐代〕</h3>
+                <p class="textp">小时不识月，呼作白玉盘。</p>
+                <p class="textp">又疑瑶台镜，飞在青云端。</p>
+                <p class="textp">仙人垂两足，桂树何团团。</p>
+                <p class="textp">白兔捣药成，问言与谁餐？</p>
+                <p class="textp">蟾蜍蚀圆影，大明夜已残。</p>
+                <p class="textp">羿昔落九乌，天人清且安。</p>
+                <p class="textp">阴精此沦惑，去去不足观。</p>
+                <p class="textp">忧来其如何？凄怆摧心肝。</p>
+                <br>
+                <h3 class="text2">译文</h3>
+                <p class="text1_">小时不识天上明月，把它称为白玉圆盘。</p>
+                <P class="text1_">怀疑它是瑶台仙镜，飞在夜空青云上边。</P>
+                <p class="text1_">月中仙人垂下双脚？月中桂树多么圆圆！</p>
+                <p class="text1_">白兔捣成不老仙药，借问一声给谁用餐？</p>
+                <p class="text1_">蟾蜍食月残缺不全，皎洁月儿因此晦暗。</p>
+                <p class="text1_">后羿射落九个太阳，天上人间清明平安。</p>
+                <p class="text1_">月亮沦没迷惑不清，不值观看想要离开。</p>
+                <p class="text1_">心怀忧虑不忍远去，凄惨悲伤肝肠寸断。</p>
+            </div>
+        </div>
+        <div class="rightpg">
+            <h3 class="text2">赏析</h3>
+            <p class="text2_">这是一首乐府诗。“朗月行”，是乐府古题，属《杂曲歌辞》。鲍照有《朗月行》，写佳人对月弦歌。李白采用这个题目，故称《古朗月行》，但没有因袭旧的内容。诗人运用浪漫主义的创作方法，通过丰富的想象，神话传说的巧妙加工，以及强烈的抒情，构成瑰丽神奇而含意深蕴的艺术形象。</p>
+            <br>
+            <img src="../../static/image/古朗月行.jpg" class="image">
+        </div>
+    </body>
+    </script>
+</html>

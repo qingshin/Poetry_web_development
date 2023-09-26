@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            background-size: cover;
+        }
+            .文华堂 {
+                position: absolute;
+                width: 21vw;
+                left: 62.2vw;
+                top: 36.6vw;
+                height: 12vw;
+                z-index: 6;
+            }
+            .志行楼 {
+                position: absolute;
+                left: 78.9vw;
+                top: 23vw;
+                width: 15vw;
+                height: 12vw;
+                z-index: 5;
+            }
+            .藏书阁 {
+                position: absolute;
+                left: 0vw;
+                top: 23vw;
+                width: 30vw;
+                height: 10vw;
+                z-index: 4;
+            }
+            .飞花社 {
+                position: absolute;
+                left: 22.5em;
+                top: 31.5em;
+                width: 13.5em;
+                height: 13.5em;
+                z-index: 3;
+            }
+            .观诗居 {
+                position: absolute;
+                left: 28vw;
+                top: 15vw;
+                width: 40vw;
+                height: 33.3vw;
+                z-index: 2;
+                }
+        a:hover img {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
-
+            <audio autoplay="true" loop="loop"><source src="../../../static/media/idx.mp3"></audio>
+            <div id="background" style="position:absolute; z-index:-1; width:100%; height:100%; top:0px; left:0px;">
+                <img src="../static/image/底.png" alt="" width="100%" height="100%">
+            </div>
+            <div id="content">
+               <a href="wht_index.html"><img src="../static/image/文华堂.png" alt="" class="文华堂"></a>
+            <a href="zxl_index.html"><img src="../static/image/志行楼.png" alt="" class="志行楼"></a>
+            <a href="csg_index.html"><img src="../static/image/藏书阁.png" alt="" class="藏书阁"></a>
+            <a href="gsj_index.html"><img src="../static/image/观诗居.png" alt="" class="观诗居"></a>
+            <a href="fhs_index.html"><img src="../static/image/飞花社.png" alt="" class="飞花社"></a>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
 </body>
 </html>

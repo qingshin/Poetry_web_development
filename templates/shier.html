@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>示儿</title>
+   <style>
+   @font-face{
+   font-family: 'simfang';
+   src: url("../static/image/font/simfang.ttf");
+   font-weight: normal;
+   font-style: normal;
+   }
+      html, body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         background-color:rgb(214, 222, 190);
+      }
+      #animation-container {
+         z-index:0;
+         float:right;
+         width: calc(100vh * 16/9);
+         height: 100%;
+         position: relative;
+         overflow: hidden;
+      }
+      video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #continue-button {
+         position: absolute;
+         top: 25vw;
+         right: 4vw;
+         border-style: none;
+         background-color:transparent;
+         z-index:100;
+      }
+      #pre-button {
+         position: absolute;
+         top: 25vw;
+         left: 11vw;
+         border-style: none;
+         background-color:transparent;
+         display: none;
+         z-index:100;
+      }
+      .btn{
+         position: absolute;
+         width: 4vw;
+         height: 6vw;
+         z-index: 100;
+      }
+      #show{
+         background-color:transparent;
+         font-size: 40px;
+         text-align:center;
+         text-decoration-line:underline;
+         margin:0;
+         padding: 0;
+         border: none;
+         height: 40px;
+         width: 7vw;
+         left: 65vw;
+         top:calc(100vw * 7 / 16);
+         position:absolute;
+         z-index:999;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #show:hover{
+         color:chocolate;
+      }
+      #popup{
+         position: fixed;
+         width: 88%;
+         height: calc(100vw * 8 / 16);
+         top:0vw;
+         left:0;
+         display:none;
+         z-index: 4;
+      }
+      #link1{
+         font-size:3.2vw;
+         color:black;
+         font-family: 'simfang';
+         font-weight: bold;
+         text-decoration-line:underline;
+         position:fixed;
+         display: none;
+         margin: 0;
+         padding: 0;
+         left: 70vw;
+         top: calc(100vw*5.1/16);
+      }
+      #link1:hover{
+         color:chocolate;
+      }
+      #textbox1{
+         background-image: url("../static/image/小文本框.png");
+         background-color:transparent;
+         background-repeat: no-repeat;
+         background-size: cover;
+         font-size:3.2vw;
+         text-align:center;
+         margin:calc(3vw*3/4);
+         border: none;
+         height: calc(13vw*73/203);
+         width: 13vw;
+         left: 15vw;
+         top:calc(100vw*3.5/16);
+         position:fixed;
+         z-index:999;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #sub1{
+         background-image: url("../static/image/小文本框.png");
+         background-color:transparent;
+         background-repeat: no-repeat;
+         background-size: cover;
+         font-size:3.2vw;
+         text-align:center;
+         margin:calc(3vw*3/4);
+         border: none;
+         height: calc(14vw*73/203);
+         width: 14vw;
+         left: 30vw;
+         top:calc(100vw*3.5/16);
+         position:fixed;
+         z-index:100;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #textbox2{
+         background-image: url("../static/image/小文本框.png");
+         background-color:transparent;
+         background-repeat: no-repeat;
+         background-size: cover;
+         font-size:3.2vw;
+         text-align:center;
+         margin:calc(3vw*3/4);
+         border: none;
+         height: calc(14vw*73/203);
+         width: 14vw;
+         left: 12.2vw;
+         top:calc(100vw*2.2/16);
+         position:fixed;
+         z-index:999;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #sub2{
+         background-image: url("../static/image/小文本框.png");
+         background-color:transparent;
+         background-repeat: no-repeat;
+         background-size: cover;
+         font-size:3.2vw;
+         text-align:center;
+         margin:calc(3vw*3/4);
+         border: none;
+         height: calc(14vw*73/203);
+         width: 14vw;
+         left: 12.5vw;
+         top:calc(100vw*3.2/16);
+         position:fixed;
+         z-index:149;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #letter{
+         background-color:transparent;
+         font-size:3.2vw;
+         text-align:center;
+         text-decoration-line:underline;
+         margin:0;
+         padding: 0;
+         border: none;
+         left: 50vw;
+         top: calc(100vw*5.1/16);
+         position:absolute;
+         z-index:999;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #letter:hover{
+         color:chocolate;
+      }
+      #museum{
+         background-color:transparent;
+         font-size:2.85vw;
+         text-align:center;
+         text-decoration-line:underline;
+         margin:0;
+         padding: 0;
+         border: none;
+         left: 61.5vw;
+         top:calc(100vw*0.9/16);
+         position:absolute;
+         z-index:999;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #museum:hover{
+         color:chocolate;
+      }
+      #tip{
+         background-color:transparent;
+         font-size:2.85vw;
+         text-align:center;
+         text-decoration-line:underline;
+         margin:0;
+         padding: 0;
+         border: none;
+         left: 71.9vw;
+         top:calc(100vw*3.95/16);
+         position:absolute;
+         z-index:999;
+         display: none;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #tip:hover{
+         color:chocolate;
+      }
+      #link2{
+         font-size: 2.85vw;
+         color:black;
+         font-family: 'simfang';
+         font-weight: bold;
+         text-decoration-line:underline;
+         position:absolute;
+         display: none;
+         margin: 0;
+         padding: 0;
+         left: 54.5vw;
+         top:calc(100vw * 5.13 / 16);
+      }
+      #link2:hover{
+         color:chocolate;
+      }
+      #st{
+         background-image: url("../static/image/小文本框.png");
+         background-color:transparent;
+         background-repeat: no-repeat;
+         background-size: cover;
+         font-size:5vw;
+         text-align:center;
+         border: none;
+         height: calc(31.8vw*73/203);
+         width: 31.8vw;
+         left: 34.1vw;
+         top:calc(100vw*3.5/16);
+         position:fixed;
+         z-index:999;
+         display: block;
+         font-family: 'simfang';
+         font-weight: bold;
+      }
+      #course{
+         width:5vw;
+         margin:0;
+         padding:0;
+         height:100%;
+         position:fixed;
+      }
+      .btn2{
+         width: 150px;
+         height: 70px;
+         margin-bottom: 30px;
+         font-size:30px;
+         font-family:'simfang';
+         font-weight:bold;
+         z-index: 100;
+         border-radius: 25px;
+         background-color: blanchedalmond;
+         border-color: brown;
+      }
+      .wxs{
+         left: 40vw;
+         top: 20vh;
+         position: fixed;
+         z-index: 150;
+      }
+      #wrong{
+         width: 30vw;
+         height: 25vw;
+         display: none;
+      }
+      #right{
+         width:30vw;
+         height:30vw;
+         display:none;
+      }
+      #btton{
+               top: 2vw;
+               margin-top: 2vw;
+               margin-bottom: 2vw;
+                margin-left: 3vw;
+                writing-mode: tb-rl;
+                font-size: 40px;
+                font-family: 'simfang';
+                border-style: none;
+                border-radius: 25vw;
+                background-color: blanchedalmond;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 2px;
+                padding-right: 2px;
+                font-weight: bold;
+            }
+   </style>
+</head>
+
+<body>
+   <div id="course">
+      <a href="home.html"><button id="btton">返回</button></a>
+      <button class="btn2" id="one">第一节</button>
+      <button class="btn2" id="two">第二节</button>
+      <button class="btn2" id="three">第三节</button>
+      <button class="btn2" id="four">第四节</button>
+      <button class="btn2" id="five">第五节</button>
+   </div>
+   <div id="animation-container"> 
+      <video id="animated-video" embed="opaque">
+         <source src="../static/media/start.mp4" type="video/mp4">  
+         <source src="../static/media/s1.mp4" type="video/webm">
+         <source src="../static/media/s2.mp4" type="video/webm">
+         <source src="../static/media/s3.mp4" type="video/webm">
+         <source src="../static/media/s4.mp4" type="video/webm">
+         <source src="../static/media/s5.mp4" type="video/webm">
+         <source src="../static/media/s6.mp4" type="video/webm">
+         <source src="../static/media/s6-2.mp4" type="video/webm">
+         <source src="../static/media/s7.mp4" type="video/webm">
+         <source src="../static/media/s8-1.mp4" type="video/webm">
+         <source src="../static/media/s8-2.mp4" type="video/webm">
+         <source src="../static/media/s9.mp4" type="video/webm">
+         <source src="../static/media/s10-1.mp4" type="video/webm">
+         <source src="../static/media/s10-2.mp4" type="video/webm">
+         <source src="../static/media/s11.mp4" type="video/webm">
+         <source src="../static/media/s12.mp4" type="video/webm">
+         <source src="../static/media/s13.mp4" type="video/webm">
+         <source src="../static/media/s14.mp4" type="video/webm">
+         <source src="../static/media/s15.mp4" type="video/webm">
+         <source src="../static/media/s16.mp4" type="video/webm">
+         <source src="../static/media/s17.mp4" type="video/webm">
+         <source src="../static/media/s18.mp4" type="video/webm">
+         Your browser does not support HTML5 video.
+      </video>
+   </div>
+   <button id="st">开始学习</button>
+   <button id="continue-button"><img src="../static/image/下一页按键.png" class="btn"></button>
+   <button id="pre-button"><img src="../static/image/上一页按键.png" class="btn"></button>
+   <button id="show">写照</button>
+   <img id="popup" src="../static/image/咏梅.png">
+   <input id="textbox1">
+   <button id="sub1">提交</button>
+   <input id="textbox2">
+   <button id="sub2">提交</button>
+   <button id="letter">参考格式</button>
+   <a href="fhs_index.html"><p id="link1">飞花社</p></a>
+   <button id="museum">陆游纪念馆</button>
+   <button id="tip">“游览指南”</button>
+   <a href="fhs_index.html"><p id="link2">“飞花社”</p></a>
+   <img id="wrong" class="wxs" src="../static/image/回答错误.png">
+   <img id="right" class="wxs" src="../static/image/回答正确.png">
+
+   <script>
+      var playlist = ['../static/media/start.mp4','../static/media/s1.mp4','../static/media/s2.mp4','../static/media/s3.mp4','../static/media/s4.mp4'
+      ,'../static/media/s5.mp4','../static/media/s6.mp4','../static/media/s6-2.mp4','../static/media/s7.mp4','../static/media/s8-1.mp4','../static/media/s8-2.mp4'
+      ,'../static/media/s9.mp4','../static/media/s10-1.mp4','../static/media/s10-2.mp4','../static/media/s11.mp4','../static/media/s12.mp4','../static/media/s13.mp4'
+      ,'../static/media/s14.mp4','../static/media/s15.mp4','../static/media/s16.mp4','../static/media/s17.mp4','../static/media/s18.mp4']; // 初始化播放列表   
+      var currentVideoIndex = 0;
+      var f=0;
+      var video = document.getElementById("animated-video");
+      var continueButton = document.getElementById("continue-button");
+      var preButton = document.getElementById("pre-button");
+      var shobt=document.getElementById("show");
+      var pop=document.getElementById("popup");
+      var text_input1=document.getElementById("textbox1");
+      var subbt1=document.getElementById("sub1");
+      var text_input2=document.getElementById("textbox2");
+      var subbt2=document.getElementById("sub2");
+      var lk1=document.getElementById("link1");
+      var lt=document.getElementById("letter");
+      var mu=document.getElementById("museum");
+      var tp=document.getElementById("tip");
+      var lk2=document.getElementById("link2");
+      var sbt=document.getElementById("st");
+      var rt=document.getElementById("right");
+      var wr=document.getElementById("wrong");
+      var four=document.getElementById("four");
+
+      playCurrentVideo();
+
+      function playCurrentVideo() {
+         video.src = playlist[currentVideoIndex];
+         var vd=document.querySelector('video');
+         if(f==1)
+         {
+            f=0;
+            vd.currentTime=47;
+            console.log(vd);
+            mu.style.display="block";
+            tp.style.display="block";
+            lk2.style.display="block";
+         }
+         else{
+            video.play();
+         }
+         continueButton.style.display = "block";
+         if(currentVideoIndex==0 || playlist[currentVideoIndex]=='../static/media/s16.mp4' || playlist[currentVideoIndex]=='../static/media/s17.mp4' || playlist[currentVideoIndex]=='../static/media/s18.mp4')
+         {
+            continueButton.style.display = "none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s13.mp4')
+         {
+            lk1.style.display="block";
+            lt.style.display="block";
+         }
+      }
+
+      function pauseCurrentVideo() {
+         video.pause();
+         continueButton.style.display = "block";
+         if(currentVideoIndex==0 || playlist[currentVideoIndex]=='../static/media/s16.mp4' || playlist[currentVideoIndex]=='../static/media/s17.mp4' || playlist[currentVideoIndex]=='../static/media/s18.mp4')
+         {
+            continueButton.style.display = "none";
+         }
+      }
+
+      function playNextVideo() {
+         rt.style.display="none";
+         wr.style.display="none";
+         f=0;
+         if(playlist[currentVideoIndex]=='../static/media/s13.mp4')
+         {
+            currentVideoIndex++;
+         }
+         currentVideoIndex++;
+         if(playlist[currentVideoIndex]=='../static/media/s4.mp4')
+         {
+            shobt.style.display="none";
+            pop.style.display="none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s6-2.mp4')
+         {
+            text_input1.style.display="none";
+            subbt1.style.display="none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s8-2.mp4')
+         {
+            text_input2.style.display="none";
+            subbt2.style.display="none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s15.mp4')
+         {
+            lk1.style.display="none";
+            lt.style.display="none";
+         }
+         if (currentVideoIndex < playlist.length) {
+            playCurrentVideo();
+            }
+         if(currentVideoIndex==1 || currentVideoIndex==0){
+            preButton.style.display = "none";
+         }
+         else{
+            preButton.style.display="block";
+         }
+      }
+
+      function playPreVideo() {
+         rt.style.display="none";
+         wr.style.display="none";
+         f=0;
+         if(playlist[currentVideoIndex]=='../static/media/s15.mp4')
+         {
+            currentVideoIndex--;
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s18.mp4')
+         {
+            currentVideoIndex--;
+            f=1;
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s17.mp4')
+         {
+            f=1;
+         }
+         currentVideoIndex--;
+         if(playlist[currentVideoIndex]=='../static/media/s2.mp4')
+         {
+            shobt.style.display="none";
+            pop.style.display="none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s5.mp4')
+         {
+            text_input1.style.display="none";
+            subbt1.style.display="none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s7.mp4')
+         {
+            text_input2.style.display="none";
+            subbt2.style.display="none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s12.mp4')
+         {
+            lk1.style.display="none";
+            lt.style.display="none";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s15.mp4')
+         {
+            mu.style.display="none";
+            tp.style.display="none";
+            lk2.style.display="none";
+         }
+         //第一张不显示
+         if (currentVideoIndex > 0) {
+            playCurrentVideo();
+            } 
+         if(currentVideoIndex==1 || currentVideoIndex==0){
+            preButton.style.display = "none";
+         }
+         else{
+            preButton.style.display="block";
+         }
+      }
+      
+      continueButton.addEventListener("click", function() {
+         playNextVideo();
+      });
+
+      preButton.addEventListener("click", function() {
+         playPreVideo();
+      });
+
+      subbt1.addEventListener("click",function(){
+         var Input_text = text_input1.value;
+         if(Input_text==null || Input_text=="")
+         {
+            alert("必须填写省份");
+         }
+         else{
+            if(Input_text=="河南" || Input_text=="河南省")
+               rt.style.display="block";
+            else
+               wr.style.display="block";
+            setTimeout(()=>{
+               playNextVideo();
+            },3000);
+
+         }
+      })
+      subbt2.addEventListener("click",function(){
+         var Input_text = text_input2.value;
+         if(Input_text==null || Input_text=="")
+         {
+            alert("必须填写发明内容");
+         }
+         else{
+            if(Input_text=="造纸术")
+               rt.style.display="block";
+            else
+               wr.style.display="block";
+            setTimeout(()=>{
+               playNextVideo();
+            },3000);
+         }
+      })
+
+      lt.addEventListener("click",function(){
+         currentVideoIndex++;
+         playCurrentVideo();
+         lk1.style.display="none";
+         lt.style.display="none";
+      })
+
+      shobt.addEventListener("click",function(){
+         pop.style.display="block";
+      })
+
+      mu.addEventListener("click",function(){
+         currentVideoIndex++;
+         playCurrentVideo();
+         mu.style.display="none";
+         tp.style.display="none";
+         lk2.style.display="none";
+         continueButton.style.display = "none";
+      })
+
+      tp.addEventListener("click",function(){
+         currentVideoIndex+=2;
+         playCurrentVideo();
+         mu.style.display="none";
+         tp.style.display="none";
+         lk2.style.display="none";
+         continueButton.style.display = "none";
+      })
+
+      sbt.addEventListener("click",function(){
+         currentVideoIndex+=1;
+         playCurrentVideo();
+         sbt.style.display="none";
+      })
+
+      four.addEventListener("click",function(){
+         currentVideoIndex=12;
+         playCurrentVideo();
+      })
+
+      if(video.addEventListener("ended",function(){
+         //视频结束
+         pauseCurrentVideo();
+         if(playlist[currentVideoIndex]=='../static/media/s3.mp4')
+         {
+            shobt.style.display="block";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s6.mp4')
+         {
+            text_input1.style.display="block";
+            subbt1.style.display="block";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s8-1.mp4')
+         {
+            text_input2.style.display="block";
+            subbt2.style.display="block";
+         }
+         if(playlist[currentVideoIndex]=='../static/media/s16.mp4')
+         {
+            mu.style.display="block";
+            tp.style.display="block";
+            lk2.style.display="block";
+         }
+      }));
+
+    </script> 
+
+</body> 
+</html>

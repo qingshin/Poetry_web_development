@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+         <title>观诗居</title>
+    </head>
+    <style>
+    @font-face{
+             font-family: 'simfang';
+             src: url("font/simfang.ttf");
+             font-style: normal;
+            }
+        html, body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         background-image: url(images/界面.png);
+         background-repeat:  no-repeat;
+         background-size: cover;
+        }
+        #boat{
+            position: fixed;
+            margin-left:53%;
+            margin-top:28%;
+            height:20%;
+        }
+        #boat:hover{
+            height:21%;
+        }
+        #pre-button{
+                top: 2vw;
+                left: 0.8vw;
+                writing-mode: tb-rl;
+                font-size: 40px;
+                font-family: 'simfang';
+                position: fixed;
+                border-style: none;
+                border-radius: 25vw;
+                background-color: blanchedalmond;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 2px;
+                padding-right: 2px;
+                font-weight: bold;
+        }
+    </style>
+    <body>                      
+        <audio autoplay="true" loop="loop"><source src="../../../../static/media/gsj.mp3"></audio>
+        <a href="shier.html"><img src="images/船.png" id="boat"></a>
+       <a href="../../主页/主页.html"><button id="pre-button">返回</button></a>
+    </body>
+</html>
