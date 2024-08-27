@@ -241,3 +241,10 @@ div.annnotelabel {
     display: none;
     visibility: hidden;
 }
+
+button{
+    background-color: light green;
+    border-radius: 8px;
+    font-size: 24px;
+    font-color: white;
+}
