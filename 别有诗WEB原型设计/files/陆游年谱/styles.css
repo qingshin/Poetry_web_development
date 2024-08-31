@@ -77,6 +77,8 @@
   top:226px;
   width:982px;
   height:808px;
+  font-size:20px;
+  line-height:50px;
 }
 #u217_input {
   position:absolute;
@@ -478,4 +480,11 @@
   width:142px;
   visibility:hidden;
   word-wrap:break-word;
+}
+.1{
+  font-size:20px;
+  line-height:50px;
+}
+.2{
+  font-size:18px;
 }
