@@ -1,7 +1,7 @@
-var playlist = ['./images/示儿/static/media/start.mp4','./images/示儿/static/media/s1.mp4','./images/示儿/static/media/s2.mp4','./images/示儿/static/media/s3.mp4','./images/示儿/static/media/s4.mp4'
-    ,'./images/示儿/static/media/s5.mp4','./images/示儿/static/media/s6.mp4','./images/示儿/static/media/s6-2.mp4','./images/示儿/static/media/s7.mp4','./images/示儿/static/media/s8-1.mp4','./images/示儿/static/media/s8-2.mp4'
-    ,'./images/示儿/static/media/s9.mp4','./images/示儿/static/media/s10-1.mp4','./images/示儿/static/media/s10-2.mp4','./images/示儿/static/media/s11.mp4','./images/示儿/static/media/s12.mp4','./images/示儿/static/media/s13.mp4'
-    ,'./images/示儿/static/media/s14.mp4','./images/示儿/static/media/s15.mp4','./images/示儿/static/media/s16.mp4','./images/示儿/static/media/s17.mp4','./images/示儿/static/media/s18.mp4']; // 初始化播放列表
+var playlist = ['./images/示儿/start.mp4','./images/示儿/s1.mp4','./images/示儿/s2.mp4','./images/示儿/s3.mp4','./images/示儿/s4.mp4'
+    ,'./images/示儿/s5.mp4','./images/示儿/s6.mp4','./images/示儿/s6-2.mp4','./images/示儿/s7.mp4','./images/示儿/s8-1.mp4','./images/示儿/s8-2.mp4'
+    ,'./images/示儿/s9.mp4','./images/示儿/s10-1.mp4','./images/示儿/s10-2.mp4','./images/示儿/s11.mp4','./images/示儿/s12.mp4','./images/示儿/s13.mp4'
+    ,'./images/示儿/s14.mp4','./images/示儿/s15.mp4','./images/示儿/s16.mp4','./images/示儿/s17.mp4','./images/示儿/s18.mp4']; // 初始化播放列表
 
 var currentVideoIndex = 0;
 var f=0;
@@ -51,11 +51,11 @@ function playCurrentVideo() {
 
     }
     continueButton.style.display = "block";
-    if(currentVideoIndex==0 || playlist[currentVideoIndex]=='./images/示儿/static/media/s16.mp4' || playlist[currentVideoIndex]=='./images/示儿/static/media/s17.mp4' || playlist[currentVideoIndex]=='./images/示儿/static/media/s18.mp4')
+    if(currentVideoIndex==0 || playlist[currentVideoIndex]=='./images/示儿/s16.mp4' || playlist[currentVideoIndex]=='./images/示儿/s17.mp4' || playlist[currentVideoIndex]=='./images/示儿/s18.mp4')
     {
         continueButton.style.display = "none";
     }
-    // if(playlist[currentVideoIndex]=='./images/示儿/static/media/s13.mp4')
+    // if(playlist[currentVideoIndex]=='./images/示儿/s13.mp4')
     // {
     //     lk1.style.display="block";
     //     lt.style.display="block";
@@ -65,7 +65,7 @@ function playCurrentVideo() {
 function pauseCurrentVideo() {
     video.pause();
     continueButton.style.display = "block";
-    if(currentVideoIndex==0 || playlist[currentVideoIndex]=='./images/示儿/static/media/s16.mp4' || playlist[currentVideoIndex]=='./images/示儿/static/media/s17.mp4' || playlist[currentVideoIndex]=='./images/示儿/static/media/s18.mp4')
+    if(currentVideoIndex==0 || playlist[currentVideoIndex]=='./images/示儿/s16.mp4' || playlist[currentVideoIndex]=='./images/示儿/s17.mp4' || playlist[currentVideoIndex]=='./images/示儿/s18.mp4')
     {
         continueButton.style.display = "none";
     }
@@ -75,27 +75,27 @@ function playNextVideo() {
     rt.style.display="none";
     wr.style.display="none";
     f=0;
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s13.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s13.mp4')
     {
         currentVideoIndex++;
     }
     currentVideoIndex++;
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s4.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s4.mp4')
     {
         shobt.style.display="none";
         pop.style.display="none";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s6-2.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s6-2.mp4')
     {
         text_input1.style.display="none";
         subbt1.style.display="none";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s8-2.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s8-2.mp4')
     {
         text_input2.style.display="none";
         subbt2.style.display="none";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s15.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s15.mp4')
     {
         lk1.style.display="none";
         lt.style.display="none";
@@ -115,41 +115,41 @@ function playPreVideo() {
     rt.style.display="none";
     wr.style.display="none";
     f=0;
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s15.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s15.mp4')
     {
         currentVideoIndex--;
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s18.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s18.mp4')
     {
         currentVideoIndex--;
         f=1;
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s17.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s17.mp4')
     {
         f=1;
     }
     currentVideoIndex--;
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s2.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s2.mp4')
     {
         shobt.style.display="none";
         pop.style.display="none";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s5.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s5.mp4')
     {
         text_input1.style.display="none";
         subbt1.style.display="none";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s7.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s7.mp4')
     {
         text_input2.style.display="none";
         subbt2.style.display="none";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s12.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s12.mp4')
     {
         lk1.style.display="none";
         lt.style.display="none";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s15.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s15.mp4')
     {
         mu.style.display="none";
         tp.style.display="none";
@@ -278,26 +278,26 @@ five.addEventListener("click",function(){
 if(video.addEventListener("ended",function(){
     //视频结束
     pauseCurrentVideo();
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s3.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s3.mp4')
     {
         shobt.style.display="block";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s6.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s6.mp4')
     {
         text_input1.style.display="block";
         subbt1.style.display="block";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s8-1.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s8-1.mp4')
     {
         text_input2.style.display="block";
         subbt2.style.display="block";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s13.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s13.mp4')
     {
         lt.style.display="block";
         lk1.style.display="block";
     }
-    if(playlist[currentVideoIndex]=='./images/示儿/static/media/s16.mp4')
+    if(playlist[currentVideoIndex]=='./images/示儿/s16.mp4')
     {
         mu.style.display="block";
         tp.style.display="block";
