@@ -644,8 +644,3 @@ a:hover{
   width:316px;
   white-space:nowrap;
 }
-.rightpg,
-.leftpg {
-    position: relative;
-    top: 280px;
-}

@@ -1,0 +1,31 @@
+.background {
+    background-image: url('../../images/藏书阁/element/藏书阁界面.png'); /* 设置背景图片 */
+    background-size: cover; /* 让图片覆盖整个div */
+    background-position: center; /* 图片居中 */
+    background-repeat: no-repeat; /* 图片不重复 */
+    position: absolute;
+    top: 200px;
+    width:1100px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 725px; /* 假设 background 的高度 */
+    position: relative; /* 使内部元素可以相对于它定位 */
+}
+
+.leftpg {
+    position: absolute;
+    left: 120px; /* 相对于 background 的左边 */
+    top: 130px;
+    width: 410px;
+    height: 500px;
+    overflow: auto;
+}
+
+.rightpg {
+    position: absolute;
+    right: 80px; /* 相对于 background 的右边 */
+    top: 130px;
+    width: 410px;
+    height: 500px;
+    overflow: auto;
+}
