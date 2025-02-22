@@ -16,9 +16,11 @@
     position: absolute;
     left: 120px; /* 相对于 background 的左边 */
     top: 130px;
-    width: 410px;
+    width: 370px;
     height: 500px;
     overflow: auto;
+    overflow: auto; /* 允许滚动 */
+    scrollbar-width: none; /* 隐藏滚动条 */
 }
 
 .rightpg {
@@ -27,5 +29,85 @@
     top: 130px;
     width: 410px;
     height: 500px;
-    overflow: auto;
+    overflow: auto; /* 允许滚动 */
+    scrollbar-width: none; /* 隐藏滚动条 */
+}
+
+body{
+    background-image: url("../../images/藏书阁/u241.jpg");
+    background-size: cover;
+}
+a{
+    text-decoration:none;
+}
+
+#txt{
+    position: absolute;
+    top: 15%;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+    /*border:1px solid black;*/
+}
+.textta{
+    font-family: cursive;
+    position: relative;
+    text-align: center;
+    margin: 1%;
+    font-size:29px;
+}
+.textp{
+    font-family: cursive;
+    font-size: large;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    font-size: 23px;
+}
+.text1_{
+    font-family: cursive;
+    position: relative;
+    text-align: left;
+    margin: 1%;
+    font-size: 21px;
+}
+.text2{
+    font-family: cursive;
+    position: relative;
+    text-align: left;
+    margin: 0;
+    font-size: 25px;
+}
+.text2_{
+    font-family: cursive;
+    text-indent: 2em;
+    position: relative;
+    text-align: start;
+    margin: 0;
+    font-size: 21px;
+}
+.text3{
+    font-family: cursive;
+    text-indent: 2em;
+    position: relative;
+    text-align: start;
+    margin:0;
+    font-size: 19px;
+}
+.image{
+    position: absolute;
+    max-width: 400px;
+    height: auto;
+}
+.link:hover{
+    color:gray;
+}
+.link{
+    color:#333;
+    font-family: cursive;
+}
+.mulu{
+    color:#333;
+    font-family: cursive;
+    font-size: 20px;
 }
