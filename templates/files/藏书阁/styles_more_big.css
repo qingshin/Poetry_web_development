@@ -4,31 +4,31 @@
     background-position: center; /* 图片居中 */
     background-repeat: no-repeat; /* 图片不重复 */
     position: absolute;
-    top: 200px;
-    width:1100px;
+    top: 170px;
+    width:1255px;
     left: 50%;
     transform: translateX(-50%);
-    height: 725px; /* 假设 background 的高度 */
+    height: 821px; /* 假设 background 的高度 */
     position: relative; /* 使内部元素可以相对于它定位 */
 }
 
 .leftpg {
     position: absolute;
-    left: 120px; /* 相对于 background 的左边 */
-    top: 130px;
-    width: 370px;
-    height: 500px;
+    left: 119px;
+    top: 158px;
+    width: 463px;
+    height: 530px;
     overflow: auto;
-    overflow: auto; /* 允许滚动 */
-    scrollbar-width: none; /* 隐藏滚动条 */
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .rightpg {
     position: absolute;
-    right: 80px; /* 相对于 background 的右边 */
-    top: 130px;
-    width: 410px;
-    height: 500px;
+    right: 119px; /* 相对于 background 的右边 */
+    top: 158px;
+    width: 463px;
+    height: 530px;
     overflow: auto; /* 允许滚动 */
     scrollbar-width: none; /* 隐藏滚动条 */
 }
@@ -54,7 +54,7 @@ a{
     position: relative;
     text-align: center;
     margin: 1%;
-    font-size:29px;
+    font-size:34px;
 }
 .textp{
     font-family: cursive;
@@ -62,21 +62,21 @@ a{
     position: relative;
     text-align: center;
     margin: 0;
-    font-size: 23px;
+    font-size: 28px;
 }
 .text1_{
     font-family: cursive;
     position: relative;
     text-align: left;
     margin: 1%;
-    font-size: 21px;
+    font-size: 26px;
 }
 .text2{
     font-family: cursive;
     position: relative;
     text-align: left;
     margin: 0;
-    font-size: 25px;
+    font-size: 30px;
 }
 .text2_{
     font-family: cursive;
@@ -84,7 +84,7 @@ a{
     position: relative;
     text-align: start;
     margin: 0;
-    font-size: 21px;
+    font-size: 27px;
 }
 .text3{
     font-family: cursive;
@@ -92,12 +92,27 @@ a{
     position: relative;
     text-align: start;
     margin:0;
-    font-size: 19px;
+    font-size: 25px;
 }
-.image{
-    position: absolute;
-    max-width: 400px;
-    height: auto;
+.text3_{
+    font-family: cursive;
+    position: relative;
+    text-align: start;
+    margin: 0;
+    font-size: 27px;
+}
+.image-container {
+    position: relative;
+    width: 450px; /* 设置容器宽度，可根据需要调整 */
+    height: auto; /* 保持容器高度自适应 */
+}
+
+.image {
+    display: block; /* 去除图片的默认间距 */
+    width: 100%;
+    max-width: 450px; /* 设置图片最大宽度 */
+    height: auto; /* 保持图片宽高比例 */
+    margin: 0 auto; /* 水平居中图片 */
 }
 .link:hover{
     color:gray;
@@ -109,5 +124,31 @@ a{
 .mulu{
     color:#333;
     font-family: cursive;
-    font-size: 20px;
+    font-size: 30px;
+}
+
+
+.catalogue:hover{
+    color:gray;
+}
+.catalogue{
+    color:#333;
+    font-family: cursive;
+    font-size: 34px;
+    position: relative;
+    text-align: center;
+    margin: 0;
+}
+
+.back:hover{
+    color:gray;
+}
+.back{
+    color:#333;
+    font-family: cursive;
+    font-size: x-large;
+    position: absolute;
+    bottom: 0;
+    right:0;
+    margin: 0;
 }

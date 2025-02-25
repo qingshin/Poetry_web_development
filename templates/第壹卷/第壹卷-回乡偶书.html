@@ -50,124 +50,10 @@
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
-    </script>
+    </script><link href="../files/藏书阁/styles_more_big.css" type="text/css" rel="stylesheet"/>
     </head>
-    <style>
-        @media (max-width: 1200px){
-            .background{
-                position: absolute;
-                left: 100px;
-            }
-            .leftpg{
-                position:absolute;
-                left: 190px;
-                top: 280px;
-                width: 410px;
-                height: 530px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: 630px;
-                top: 280px;
-                width: 390px;
-                height: 530px;
-                overflow: auto;
-            }
-        }
-        @media (min-width: 1201px){
-            .background{
-                position: absolute;
-                left: calc(50vw - 500px);
-            }
-            .leftpg{
-                position:absolute;
-                left: calc(50vw - 425px);
-                top: 280px;
-                width: 410px;
-                height: 530px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: calc(50vw + 30px);
-                top: 280px;
-                width: 390px;
-                height: 530px;
-                overflow: auto;
-            }
-        }
-        body{
-            background-image: url("../images/藏书阁/u241.jpg");
-            background-size: cover;
-        } 
-        a{
-            text-decoration:none;
-        }
 
-        #txt{
-            position: absolute;
-            top: 25%;
-	        bottom: 25%;
-            left: 0;
-            right: 0;
-            /*border:1px solid black;*/
-        }
-        .textta{
-            font-family: cursive;
-            position: relative;
-            text-align: center;
-            margin: 1%;
-        }
-        .textp{
-            font-family: cursive;
-            font-size: large;
-            position: relative;
-            text-align: center;
-            margin: 0;
-        }
-        .text1_{
-            font-family: cursive;
-            position: relative;
-            text-align: left;
-            margin: 1%;
-        }
-        .text2{
-            font-family: cursive;
-            position: relative;
-            text-align: left;
-            margin: 0;
-        }
-        .text2_{
-            font-family: cursive;
-            text-indent: 2em;
-            position: relative;
-            text-align: start;
-            margin: 0;
-        }
-        .text3{
-            font-family: cursive;
-            text-indent: 2em;
-            position: relative;
-            text-align: start;
-            margin:0;
-        }
-        .image{
-            position: relative;
-            max-width: 370px;
-            height: auto;
-        }
-        .link:hover{
-            color:gray;
-        }
-        .link{
-            color:#333;
-            font-family: cursive;
-            
-        }
-    </style>
     <body>
-        <img src="../images/藏书阁/element/藏书阁界面.png" class="background" style="top: 200px">
         <!-- 导航栏START！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
         <span>
             <!-- Unnamed (图片) -->
@@ -251,8 +137,9 @@
                 </div>
             </span>
         <!-- 导航栏END！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
+        <div class="background">
         <div class="leftpg">
-            <a href="../../templates/藏书阁-第壹卷.html" class="link">目录</a>
+            <a href="../../templates/藏书阁-第壹卷.html" class="mulu">目录</a>
             <div id="txt">
                 <h1 class="textta">回乡偶书</h1>
                 <h3 class="textta">贺知章 〔唐代〕</h3>
@@ -268,9 +155,11 @@
             <h3 class="text2">赏析</h3>
             <p class="text3">这是一首久客异乡、缅怀故里的感怀诗。写于初来乍到之时，抒写久客伤老之情。此诗通过白描，运用了对比的手法，表明离开家乡时间之长，人事变化速度之快，以及诗人回乡欢愉之情和人世沧桑之感。</p>
             <br>
+            <div class="image-container">
             <img src="../../static/image/回乡偶书2.jpg" class="image">
-            <br>
             <img src="../../static/image/回乡偶书.jpg" class="image">
+            </div>
+        </div>
         </div>
     </body>
     </script>

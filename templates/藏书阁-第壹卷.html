@@ -48,89 +48,10 @@
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
-    </script>
+    </script><link href="files/藏书阁/styles_more_big.css" type="text/css" rel="stylesheet"/>
     </head>
-    <style>
-        @media (max-width: 1200px){
-            .background{
-                position: absolute;
-                left: 100px;
-            }
-            .leftpg{
-                position:absolute;
-                left: 165px;
-                top: 70px;
-                width: 440px;
-                height: 550px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: 630px;
-                top: 70px;
-                width: 390px;
-                height: 500px;
-                overflow: auto;
-                /*border: 1px solid black;*/
-            }
-        }
-        @media (min-width: 1201px){
-            .background{
-                position: absolute;
-                left: calc(50vw - 500px);
-            }
-            .leftpg{
-                position:absolute;
-                left: calc(50vw - 435px);
-                top: 70px;
-                width: 440px;
-                height: 550px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: calc(50vw + 30px);
-                top: 70px;
-                width: 390px;
-                height: 500px;
-                overflow: auto;
-                /*border: 1px solid black;*/
-            }
-        }
 
-        body{
-            background-image: url(images/藏书阁/u241.jpg);
-            background-size: cover;
-        } 
-        a{
-            text-decoration:none;
-        }
-        .catalogue:hover{
-            color:gray;
-        }
-        .catalogue{
-            color:#333;
-            font-family: cursive;
-            font-size: xx-large;
-            position: relative;
-            text-align: center;
-            margin: 0;
-        }
-        .back:hover{
-            color:gray;
-        }
-        .back{
-            color:#333;
-            font-family: cursive;
-            font-size: x-large;
-            position: absolute;
-            bottom: 0;
-            right:0;
-            margin: 0;
-        }
-    </style>
     <body>
-        <img src="images/藏书阁/element/藏书阁界面.png" class="background" style="top: 200px">
         <!-- 导航栏START！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
         <span>
             <!-- Unnamed (图片) -->
@@ -214,7 +135,8 @@
                 </div>
             </span>
         <!-- 导航栏END！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
-            <div class="leftpg" style="top: 280px;">
+        <div class="background">
+        <div class="leftpg" >
                 <a href="./第壹卷/第壹卷-江南.html"><h2 class="catalogue">江南</h2></a>
                 <a href="./第壹卷/第壹卷-长歌行.html"><h2 class="catalogue">长歌行</h2></a>
                 <a href="./第壹卷/第壹卷-敕勒歌.html"><h2 class="catalogue">敕勒歌</h2></a>
@@ -229,7 +151,7 @@
                 <a href="./第壹卷/第壹卷-出塞.html"><h2 class="catalogue">出塞</h2></a>
                 <a href="./第壹卷/第壹卷-芙蓉楼送辛渐.html"><h2 class="catalogue">芙蓉楼送辛渐</h2></a>
             </div>
-            <div class="rightpg" style="top: 280px;">
+            <div class="rightpg" >
                 <a href="./第壹卷/第壹卷-鹿柴.html"><h2 class="catalogue">鹿柴</h2></a>
                 <a href="./第壹卷/第壹卷-送元二使安西.html"><h2 class="catalogue">送元二使安西</h2></a>
                 <a href="./第壹卷/第壹卷-九月九日忆山东兄弟.html"><h2 class="catalogue">九月九日忆山东兄弟</h2></a>
@@ -244,6 +166,7 @@
                 <a href="./第壹卷/第壹卷-绝句.html"><h2 class="catalogue">绝句</h2></a>
                 <a href="藏书阁.html"><h2 class="back">返回藏书阁</h2></a>
             </div>
+        </div>
     </body>
     </script>
 </html>

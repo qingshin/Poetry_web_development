@@ -50,130 +50,10 @@
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
-    </script>
+    </script><link href="../files/藏书阁/styles_more_big.css" type="text/css" rel="stylesheet"/>
     </head>
-    <style>
-        @media (max-width: 1200px){
-            .background{
-                position: absolute;
-                left: 100px;
-            }
-            .leftpg{
-                position:absolute;
-                left: 190px;
-                top: 280px;
-                width: 410px;
-                height: 530px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: 630px;
-                top: 280px;
-                width: 390px;
-                height: 530px;
-                overflow: auto;
-            }
-        }
-        @media (min-width: 1201px){
-            .background{
-                position: absolute;
-                left: calc(50vw - 500px);
-            }
-            .leftpg{
-                position:absolute;
-                left: calc(50vw - 425px);
-                top: 280px;
-                width: 410px;
-                height: 530px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: calc(50vw + 30px);
-                top: 280px;
-                width: 390px;
-                height: 530px;
-                overflow: auto;
-            }
-        }
-        body{
-            background-image: url("../images/藏书阁/u241.jpg");
-            background-size: cover;
-        } 
-        a{
-            text-decoration:none;
-        }
 
-        #txt{
-            position: absolute;
-            top: 25%;
-	        bottom: 25%;
-            left: 0;
-            right: 0;
-            /*border:1px solid black;*/
-        }
-        .textta{
-            font-family: cursive;
-            position: relative;
-            text-align: center;
-            margin: 1%;
-        }
-        .textp{
-            font-family: cursive;
-            font-size: large;
-            position: relative;
-            text-align: center;
-            margin: 0;
-        }
-        .text1_{
-            font-family: cursive;
-            position: relative;
-            text-align: center;
-            margin: 1%;
-        }
-        .text2{
-            font-family: cursive;
-            position: relative;
-            text-align: left;
-            margin: 0;
-        }
-        .text2_{
-            font-family: cursive;
-            text-indent: 2em;
-            position: relative;
-            text-align: start;
-            margin: 0;
-        }
-        .text3{
-            font-family: cursive;
-            text-indent: 1em;
-            position: relative;
-            text-align: start;
-            margin:0;
-        }
-        .text3_{
-            font-family: cursive;
-            position: relative;
-            text-align: start;
-            margin:0;
-        }
-        .image{
-            position: relative;
-            max-width: 370px;
-            height: auto;
-        }
-        .link:hover{
-            color:gray;
-        }
-        .link{
-            color:#333;
-            font-family: cursive;
-            
-        }
-    </style>
     <body>
-        <img src="../images/藏书阁/element/藏书阁界面.png" class="background" style="top: 200px">
         <!-- 导航栏START！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
         <span>
             <!-- Unnamed (图片) -->
@@ -257,8 +137,9 @@
                 </div>
             </span>
         <!-- 导航栏END！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
+        <div class="background">
         <div class="leftpg">
-            <a href="../../templates/藏书阁-第壹卷.html" class="link">目录</a>
+            <a href="../../templates/藏书阁-第壹卷.html" class="mulu">目录</a>
             <div id="txt">
                 <h1 class="textta">望庐山瀑布</h1>
                 <h3 class="textta">李白 〔唐代〕</h3>
@@ -279,9 +160,11 @@
             <h3 class="text2">赏析</h3>
             <p class="text2_">这首诗写的是在寂静的月夜思念家乡的感受。这首小诗，既没有奇特新颖的想象，更没有精工华美的辞藻；它只是用叙述的语气，写远客思乡之情，然而它却意味深长，耐人寻味，千百年来，如此广泛地吸引着读者。</p>
             <br>
+            <div class="image-container">
             <img src="../../static/image/望庐山瀑布.jpg" class="image">
-            <br>
             <img src="../../static/image/望庐山瀑布2.jpg" class="image">
+            </div>
+        </div>
         </div>
     </body>
     </script>

@@ -50,123 +50,10 @@
       $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
       $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
       $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
-    </script>
+    </script><link href="../files/藏书阁/styles_more_big.css" type="text/css" rel="stylesheet"/>
     </head>
-    <style>
-        @media (max-width: 1200px){
-            .background{
-                position: absolute;
-                left: 100px;
-            }
-            .leftpg{
-                position:absolute;
-                left: 170px;
-                top: 280px;
-                width: 450px;
-                height: 530px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: 630px;
-                top: 280px;
-                width: 390px;
-                height: 530px;
-                overflow: auto;
-            }
-        }
-        @media (min-width: 1201px){
-            .background{
-                position: absolute;
-                left: calc(50vw - 500px);
-            }
-            .leftpg{
-                position:absolute;
-                left: calc(50vw - 440px);
-                top: 280px;
-                width: 440px;
-                height: 530px;
-                overflow: auto;
-            }
-            .rightpg{
-                position:absolute;
-                left: calc(50vw + 30px);
-                top: 280px;
-                width: 390px;
-                height: 530px;
-                overflow: auto;
-            }
-        }
-        body{
-            background-image: url("../images/藏书阁/u241.jpg");
-            background-size: cover;
-        } 
-        a{
-            text-decoration:none;
-        }
 
-        #txt{
-            position: absolute;
-            top: 25%;
-	        bottom: 25%;
-            left: 0;
-            right: 0;
-            /*border:1px solid black;*/
-        }
-        .textta{
-            font-family: cursive;
-            position: relative;
-            text-align: center;
-            margin: 1%;
-        }
-        .textp{
-            font-family: cursive;
-            font-size: large;
-            position: relative;
-            text-align: center;
-            margin: 0;
-        }
-        .text1_{
-            font-family: cursive;
-            position: relative;
-            text-align: left;
-            margin: 1%;
-        }
-        .text2{
-            font-family: cursive;
-            position: relative;
-            text-align: left;
-            margin: 0;
-        }
-        .text2_{
-            font-family: cursive;
-            text-indent: 2em;
-            position: relative;
-            text-align: start;
-            margin: 0;
-        }
-        .text3{
-            font-family: cursive;
-            position: relative;
-            text-align: start;
-            margin:0;
-        }
-        .image{
-            position: absolute;
-            max-width: 370px;
-            height: auto;
-        }
-        .link:hover{
-            color:gray;
-        }
-        .link{
-            color:#333;
-            font-family: cursive;
-            
-        }
-    </style>
     <body>
-        <img src="../images/藏书阁/element/藏书阁界面.png" class="background" style="top: 200px">
         <!-- 导航栏START！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
         <span>
             <!-- Unnamed (图片) -->
@@ -250,13 +137,16 @@
                 </div>
             </span>
         <!-- 导航栏END！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！ -->
+        <div class="background">
         <div class="leftpg">
-            <a href="../../templates/藏书阁-第壹卷.html" class="link">目录</a>
+            <a href="../../templates/藏书阁-第壹卷.html" class="mulu">目录</a>
             <div id="txt">
                 <h1 class="textta">江南</h1>
                 <h3 class="textta">汉乐府 〔两汉〕</h3>
-                <p class="textp">江南可采莲，莲叶何田田。鱼戏莲叶间。</p>
-                <p class="textp">鱼戏莲叶东，鱼戏莲叶西，鱼戏莲叶南，鱼戏莲叶北。</p>
+                <p class="textp">江南可采莲，莲叶何田田。</p>
+                <p class="textp">鱼戏莲叶间。</p>
+                <p class="textp">鱼戏莲叶东，鱼戏莲叶西，</p>
+                <p class="textp">鱼戏莲叶南，鱼戏莲叶北。</p>
                 <br>
                 <h3 class="text2">译文</h3>
                 <p class="text1_">江南又到了适宜采莲的季节了，莲叶浮出水面，挨挨挤挤，重重叠叠，迎风招展。在茂密如盖的荷叶下面，欢快的鱼儿在不停的嬉戏玩耍。</p>
@@ -271,6 +161,7 @@
             <p class="text2_">这是一首采莲歌，反映了采莲时的光景和采莲人欢乐的心情。在汉乐府民歌中具有独特的风味。</p>
             <br>
             <img src="../../static/image/江南.jpg" class="image">
+        </div>
         </div>
     </body>
     </script>
